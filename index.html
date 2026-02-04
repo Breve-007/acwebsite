@@ -1,91 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>A R AC INSTALLATION & Repair</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            color: #333;
-        }
-        header {
-            background: #0a74da;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background: #054a91;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .contact {
-            background: #e8f1fb;
-            border-radius: 8px;
-        }
-        footer {
-            background: #0a74da;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-        }
-        button {
-            background: #0a74da;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #054a91;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>AR AC Installation & Repair</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0a74da, #054a91);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 14px 24px;
+    background: white;
+    color: #0a74da;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+/* Sticky Nav */
+nav {
+    position: sticky;
+    top: 0;
+    background: #054a91;
+    padding: 12px;
+    text-align: center;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card span {
+    font-size: 40px;
+}
+
+/* Trust Badges */
+.badges {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.badge {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 220px;
+}
+
+/* Contact */
+.contact {
+    background: #e8f1fb;
+    border-radius: 10px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #0a74da;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #054a91;
+}
+
+/* Footer */
+footer {
+    background: #0a74da;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Floating Buttons */
+.float-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.float-buttons a {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 26px;
+    color: white;
+    text-decoration: none;
+}
+
+.call-btn { background: #0a74da; }
+.whatsapp-btn { background: #25D366; }
+
+/* Google Map Container */
+.map-container {
+    margin-top: 30px;
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>A R AC INSTALLATION & REPAIR</h1>
+    <h1>AR AC Installation & Repair</h1>
     <p>Fast • Reliable • Affordable AC Services</p>
+
+    <div class="hero-buttons">
+        <a href="tel:+1234567890">📞 Call Now</a>
+        <a href="https://wa.me/1234567890?text=Hi%20I%20need%20AC%20service" target="_blank">💬 WhatsApp</a>
+    </div>
 </header>
 
 <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#whyus">Why Us</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
     <h2>About Us</h2>
     <p>
-        We provide professional AC repair, installation, and maintenance services
-        for homes and offices. Our trained technicians ensure quick and reliable service.
+        We provide professional AC repair, installation, and maintenance
+        services for homes and offices with certified technicians.
     </p>
 </section>
 
@@ -93,79 +198,64 @@
     <h2>Our Services</h2>
     <div class="services">
         <div class="card">
+            <span>❄️</span>
             <h3>AC Repair</h3>
-            <p>Fix cooling issues, gas leaks, and electrical problems.</p>
+            <p>Cooling issues, gas leaks, electrical faults.</p>
         </div>
         <div class="card">
+            <span>🔧</span>
             <h3>AC Installation</h3>
-            <p>New AC installation with proper setup and testing.</p>
+            <p>Split & window AC installation.</p>
         </div>
         <div class="card">
-            <h3>AC Maintenance</h3>
-            <p>Regular servicing to improve performance and life.</p>
+            <span>🧼</span>
+            <h3>Maintenance</h3>
+            <p>Annual servicing & deep cleaning.</p>
         </div>
     </div>
 </section>
 
+<section id="whyus">
+    <h2>Why Choose Us</h2>
+    <div class="badges">
+        <div class="badge">⭐ 24/7 Service</div>
+        <div class="badge">👨‍🔧 Certified Technicians</div>
+        <div class="badge">⚡ Same-Day Support</div>
+    </div>
+</section>
+
 <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> +1 234 567 890</p>
-    <p><strong>Email:</strong> coolfix@acrepair.com</p>
-    <p><strong>Location:</strong> Your City, Your Country</p>
-    <button>Book Service</button>
+    <h2>Book a Service</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <select>
+            <option>Select Service</option>
+            <option>AC Repair</option>
+            <option>AC Installation</option>
+            <option>Maintenance</option>
+        </select>
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Submit Request</button>
+    </form>
+
+    <h3>Find Us on Google Maps</h3>
+    <div class="map-container">
+        <!-- Embed Google Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100000!2d-73.935242!3d40.730610!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1550dcbf43%3A0x4e2b3487c1c9db0b!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1631509659145!5m2!1sen!2sus"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
 </section>
 
 <footer>
-    <p>© 2026 CoolFix AC Repair. All Rights Reserved.</p>
+    <p>© 2026 AR AC Installation & Repair. All Rights Reserved.</p>
 </footer>
 
-</body>
-</html><!-- Floating Call & WhatsApp Buttons -->
-<style>
-    .float-buttons {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        z-index: 999;
-    }
-
-    .float-buttons a {
-        width: 55px;
-        height: 55px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        color: white;
-        font-size: 26px;
-        text-decoration: none;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    .call-btn {
-        background: #0a74da;
-    }
-
-    .whatsapp-btn {
-        background: #25D366;
-    }
-
-    .float-buttons a:hover {
-        transform: scale(1.1);
-    }
-</style>
-
+<!-- Floating Buttons -->
 <div class="float-buttons">
-    <!-- Call Button -->
-    <a href="tel:+1234567890" class="call-btn" title="Call Us">
-        📞
-    </a>
-
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn" title="WhatsApp Us">
-        💬
-    </a>
+    <a href="tel:+1234567890" class="call-btn">📞</a>
+    <a href="https://wa.me/1234567890?text=Hi%20I%20need%20AC%20service" target="_blank" class="whatsapp-btn">💬</a>
 </div>
+
+</body>
+</html>
